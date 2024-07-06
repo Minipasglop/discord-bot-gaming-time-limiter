@@ -10,4 +10,7 @@ public class BotConfig {
 
     @Value("${bot.token}")
     private String token;
+
+    @Value("${bot.testing.guild.id}")
+    private long testGuildId;
 }
