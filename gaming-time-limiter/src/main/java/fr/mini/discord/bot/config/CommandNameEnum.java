@@ -8,7 +8,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum CommandNameEnum {
 
-    PING_COMMAND("ping");
+    PING_COMMAND("ping"),
+    LIMIT_COMMAND("limit");
 
     private String name;
 

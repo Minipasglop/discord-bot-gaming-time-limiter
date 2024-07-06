@@ -1,0 +1,12 @@
+{
+  "name": "limit",
+  "description": "Limit on a daily basis the amount of gaming you can do",
+  "options": [
+    {
+      "name": "duration",
+      "description": "Your daily dose of gaming (in minutes)",
+      "type": 4,
+      "required": true
+    }
+  ]
+}
