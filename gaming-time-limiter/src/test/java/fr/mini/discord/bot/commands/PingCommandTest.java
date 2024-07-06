@@ -3,6 +3,7 @@ package fr.mini.discord.bot.commands;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.core.spec.InteractionApplicationCommandCallbackReplyMono;
 import fr.mini.discord.bot.config.CommandNameEnum;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -15,14 +16,18 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 class PingCommandTest {
 
-    @Mock
-    private InteractionApplicationCommandCallbackReplyMono mockedCallbackReply;
-
-    @Mock
-    private ChatInputInteractionEvent mockedEvent;
-
     @Autowired
     private PingCommand command;
+
+    private ChatInputInteractionEvent mockedEvent;
+
+    private InteractionApplicationCommandCallbackReplyMono mockedCallbackReply;
+
+    @BeforeEach
+    void setUp() {
+        mockedEvent = mock(ChatInputInteractionEvent.class);
+        mockedCallbackReply = mock(InteractionApplicationCommandCallbackReplyMono.class);
+    }
 
     @Test
     void testGetNameIsCorrect() {
