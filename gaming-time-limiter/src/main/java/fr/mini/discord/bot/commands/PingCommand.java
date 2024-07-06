@@ -1,6 +1,7 @@
 package fr.mini.discord.bot.commands;
 
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
+import fr.mini.discord.bot.config.CommandNameEnum;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
@@ -8,7 +9,7 @@ import reactor.core.publisher.Mono;
 public class PingCommand implements SlashCommand {
     @Override
     public String getName() {
-        return "ping";
+        return CommandNameEnum.PING_COMMAND.getName();
     }
 
     @Override
