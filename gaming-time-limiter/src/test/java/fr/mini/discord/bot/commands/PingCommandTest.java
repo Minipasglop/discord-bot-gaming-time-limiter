@@ -35,5 +35,7 @@ class PingCommandTest {
         when(mockedCallbackReply.withEphemeral(anyBoolean())).thenReturn(mockedCallbackReply);
         command.handle(mockedEvent);
         verify(mockedEvent, times(1)).reply();
+        verify(mockedCallbackReply, times(1)).withEphemeral(Boolean.TRUE);
+        verify(mockedCallbackReply, times(1)).withContent("Pong!");
     }
 }
